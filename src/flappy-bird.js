@@ -19,22 +19,27 @@ $(document).ready(function () {
   pipeNorth.src = "./../assets/images/pipeNorth.png";
   pipeSouth.src = "./../assets/images/pipeSouth.png";
 
-  // var audioName = new Audio();
-  // audioName.src = "audio/audio.png";
 
   var gap = 85;
   var constant = pipeNorth.height+gap;
 
-  var kX = 10;
+  var kX = 50;
   var kY = 150;
 
   var gravity = 1.75;
 
   var score = 0;
 
+  var fly = new Audio();
+  var scor = new Audio();
+
+  fly.src = "./../sounds/jump.wav";
+  scor.src = "./../sounds/score.wav";
+
   document.addEventListener("keydown",moveUp);
   function moveUp() {
-    kY -=35;
+    kY -=25;
+    fly.play();
   }
 
   var pipe = [];
@@ -53,7 +58,7 @@ function draw() {
 
     pipe[i].x --;
 
-    if(pipe[i].x == 70 ){
+    if(pipe[i].x == 350 ){
       pipe.push({
         x : cvs.width,
         y : Math.floor(Math.random()*pipeNorth.height)-
@@ -67,6 +72,7 @@ function draw() {
 
     if(pipe[i].x == 5) {
       score ++;
+      scor.play();
     }
 
 

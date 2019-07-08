@@ -1,3 +1,13 @@
 .hidden {
   display: none;
 }
+.container {
+  text-align: center;
+}
+.jumbotron {
+  text-align: center;
+  border-radius: 10px  ;
+  background-color: pink;
+  color: white;
+  text-shadow: 2px 2px 8px;
+}
