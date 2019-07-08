@@ -66,28 +66,28 @@ function update() {
     ship.thrust.y -= SHIP_THRUST * Math.sin(ship.a) / FPS;
 
     //draw thrust
-    ctx.fillStyle = 'orange',
+    ctx.fillStyle = 'red',
     ctx.strokeStyle = 'orange',
     ctx.lineWidth = SHIP_SIZE / 10,
     ctx.beginPath();
 
     ctx.moveTo(
-      ship.x - ship.r * (2 / 3 * Math.cos(ship.a) + Math.sin(ship.a)),
-      ship.y + ship.r * (2 / 3 * Math.sin(ship.a) - Math.cos(ship.a))
+      ship.x - ship.r * (2 / 3 * Math.cos(ship.a) + 0.5 * Math.sin(ship.a)),
+      ship.y + ship.r * (2 / 3 * Math.sin(ship.a) - 0.5 * Math.cos(ship.a))
     );
 
     ctx.lineTo(
-      ship.x - ship.r * (8 / 3 * Math.cos(ship.a),
-      ship.y + ship.r * (8 / 3 * Math.sin(ship.a)
+      ship.x - ship.r * 5 / 3 * Math.cos(ship.a),
+      ship.y + ship.r * 5 / 3 * Math.sin(ship.a)
     );
-    
+
     ctx.lineTo(
-      ship.x - ship.r * (2 / 3 * Math.cos(ship.a) - Math.sin(ship.a)),
-      ship.y + ship.r * (2 / 3 * Math.sin(ship.a) + Math.cos(ship.a))
+      ship.x - ship.r * (2 / 3 * Math.cos(ship.a) - 0.5 * Math.sin(ship.a)),
+      ship.y + ship.r * (2 / 3 * Math.sin(ship.a) + 0.5 * Math.cos(ship.a))
     );
 
     ctx.closePath();
-    ctx.fill()
+    ctx.fill();
     ctx.stroke();
 
   } else {
@@ -97,8 +97,8 @@ function update() {
   }
 
   // draw ship
-  ctx.strokeStyle = 'white',
-  ctx.lineWidth = SHIP_SIZE / 20,
+  ctx.strokeStyle = 'lightblue',
+  ctx.lineWidth = SHIP_SIZE / 15,
   ctx.beginPath();
 
   ctx.moveTo(
