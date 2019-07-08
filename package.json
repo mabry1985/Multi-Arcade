@@ -2,7 +2,7 @@
   "name": "blankWebpack",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "asteroids.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack --mode development",
