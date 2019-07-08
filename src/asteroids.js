@@ -134,13 +134,13 @@ function update() {
 
   if (ship.y < 0 - ship.r) {
     ship.y = canv.height + ship.r;
-  } else if (ship.y > canv.width + ship.r) {
+  } else if (ship.y > canv.height + ship.r) {
     ship.y = 0 - ship.r;
   }
 
   // center dot
-  ctx.fillStyle = 'red';
-  ctx. fillRect(ship.x - 1, ship.y - 1, 2, 2);
+  // ctx.fillStyle = 'red';
+  // ctx. fillRect(ship.x - 1, ship.y - 1, 2, 2);
 }
 
 // $(document).ready(function () {
