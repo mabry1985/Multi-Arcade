@@ -8,6 +8,8 @@ import './css/flappy-bird.css';
 $(document).ready(function () {
   var cvs = document.getElementById('flappyBird');
   var ctx = cvs.getContext('2d');
+
+
   var kirby = new Image();
   var bg = new Image();
   var pipeNorth = new Image();
@@ -20,23 +22,68 @@ $(document).ready(function () {
   // var audioName = new Audio();
   // audioName.src = "audio/audio.png";
 
-On keyDown Event : bY -=20;
+  var gap = 85;
+  var constant = pipeNorth.height+gap;
+
+  var kX = 10;
+  var kY = 150;
+
+  var gravity = 1.75;
+
+  var score = 0;
+
+  document.addEventListener("keydown",moveUp);
+  function moveUp() {
+    kY -=35;
+  }
+
+  var pipe = [];
+  pipe[0] = {
+    x : cvs.width,
+    y : 0
+  };
+
 
 function draw() {
-  ctx.drawImage(bg,0,-200);
-  ctx.drawImage(kirby,100,150,50,50);
-  ctx.drawImage(pipeNorth,80,0,50,120);
-  ctx.drawImage(pipeSouth,pX,pY+Const);
-  ctx.drawImage(kirby,bX,bY);
+  ctx.drawImage(bg,0,0);
 
-  by += gravity;
+  for(var i = 0; i < pipe.length; i++){
+    ctx.drawImage(pipeNorth,pipe[i].x,pipe[i].y);
+    ctx.drawImage(pipeSouth,pipe[i].x,pipe[i].y+constant);
+
+    pipe[i].x --;
+
+    if(pipe[i].x == 70 ){
+      pipe.push({
+        x : cvs.width,
+        y : Math.floor(Math.random()*pipeNorth.height)-
+        pipeNorth.height
+      });
+    }
+
+    if( kX + kirby.width >= pipe[i].x && kX <= pipe[i].x + pipeNorth.width && (kY <= pipe[i].y + pipeNorth.height || kY+kirby.height >= pipe[i].y+constant )){
+        location.reload();
+    }
+
+    if(pipe[i].x == 5) {
+      score ++;
+    }
+
+
+  }
+  ctx.drawImage(kirby,kX,kY);
+
+  kY += gravity;
+
+  ctx.fillStyle = "#000";
+  ctx.font = "20px Verdana";
+  ctx.fillText("Score : "+score,10,cvs.height-20);
+
   requestAnimationFrame(draw);
 
 }
 
 draw();
-
-
 
 
 });
