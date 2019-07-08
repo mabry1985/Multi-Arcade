@@ -34,7 +34,6 @@ document.addEventListener('keyup', keyUp);
 
 // game loop
 setInterval(update, 1000 / FPS);
-
 function createAsteroidBelt() {
   roids = [];
   var x;
@@ -45,6 +44,7 @@ function createAsteroidBelt() {
       y = Math.floor(Math.random() * canv.height);
     } while (distBetweenPoints(ship.x, ship.y, x, y) < ROIDS_SIZE * 2 + ship.r);
     roids.push(newAsteroid(x, y));
+    console.log(roids);
   }
 }
 
@@ -164,15 +164,20 @@ function update() {
   // draw Asteroids
   ctx.stokeStyle = 'grey';
   ctx.lineWidth = SHIP_SIZE / 20;
-  var x, y, r, a, vert, offs;
+  var x;
+  var y;
+  var a;
+  var r;
+  var vert;
+  var offs;
   for (let i = 0; i < roids.length; i++) {
-
     a = roids[i].a;
     r = roids[i].r;
     x = roids[i].x;
     y = roids[i].y;
-    vert = roids[i].vert;
     offs = roids[i].offs;
+    vert = roids[i].vert;
+
     // draw path
     ctx.beginPath();
     ctx.moveTo(
@@ -234,6 +239,3 @@ function update() {
   // ctx.fillStyle = 'red';
   // ctx. fillRect(ship.x - 1, ship.y - 1, 2, 2);
 }
-
-// $(document).ready(function () {
-// });
