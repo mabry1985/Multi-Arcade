@@ -5,6 +5,8 @@ import './css/flappy-bird.css';
 
 
 
+
+
 $(document).ready(function () {
   var cvs = document.getElementById('flappyBird');
   var ctx = cvs.getContext('2d');
@@ -33,8 +35,8 @@ $(document).ready(function () {
   var fly = new Audio();
   var scor = new Audio();
 
-  fly.src = "./../sounds/jump.wav";
-  scor.src = "./../sounds/score.wav";
+  fly.src = "./../assets/sounds/jump.mp3"
+  scor.src = "./../assets/sounds/score.mp3"
 
   document.addEventListener("keydown",moveUp);
   function moveUp() {

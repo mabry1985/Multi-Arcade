@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const {Howl, Howler} = require('howler');
 
 module.exports = {
   entry: './src/flappy-bird.js',
@@ -56,6 +57,10 @@ module.exports = {
         use: [
           'html-loader'
         ]
+      },
+      {
+        test: /\.mp3$/,
+        loader: 'file-loader'
       },
     ]
   }
