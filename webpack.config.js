@@ -18,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: '',
-      template: '../src/breakout.html',
+      template: './src/breakout.html',
       inject: 'body'
     })
   ],
@@ -37,7 +37,7 @@ module.exports = {
           /node_modules/,
           /spec/
         ],
-        loader: "eslint-loader"
+        loader: 'eslint-loader'
       },
       {
         test: /\.(gif|png|jpe?g|svg|bmp)$/,
@@ -46,7 +46,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/images/'
+              outputPath: 'assets/img/'
             }
           }
         ]

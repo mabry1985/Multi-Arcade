@@ -1,8 +1,8 @@
-import { detectCollision } from "./collisionDetection";
+import { detectCollision } from './collisionDetection';
 
 export class Brick {
   constructor(game, position) {
-    this.image = document.getElementById("img_brick");
+    this.image = document.getElementById('img_brick');
 
     this.game = game;
 

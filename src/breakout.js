@@ -1,16 +1,17 @@
-import Paddle from "/src/paddle";
-import InputHandler from "/src/input";
-// import Ball from "/src/ball";
-// import Brick from "/src/brick";
+import Paddle from '/src/paddle';
+import InputHandler from'/src/input';
+import Ball from '/src/ball';
 
-import { buildLevel, level1, level2 } from "/src/levels";
+import Brick from '/src/brick';
+
+import { buildLevel, level1, level2 } from 'src/levels';
 
 const GAMESTATE = {
   PAUSED: 0,
   RUNNING: 1,
   MENU: 2,
   GAMEOVER: 3,
-  NEWLEVEL: 4
+  NEWLEVEL: 4,
 };
 
 export default class Game {
@@ -72,38 +73,39 @@ export default class Game {
 
     if (this.gamestate === GAMESTATE.PAUSED) {
       ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-      ctx.fillStyle = "rgba(0,0,0,0.5)";
+      ctx.fillStyle = 'rgba(0,0,0,0.5)';
       ctx.fill();
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
-      ctx.textAlign = "center";
-      ctx.fillText("Paused", this.gameWidth / 2, this.gameHeight / 2);
+      ctx.font = '30px Arial';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.fillText('Paused', this.gameWidth / 2, this.gameHeight / 2);
     }
 
     if (this.gamestate === GAMESTATE.MENU) {
       ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-      ctx.fillStyle = "rgba(0,0,0,1)";
+      ctx.fillStyle = 'rgba(0,0,0,1)';
       ctx.fill();
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
-      ctx.textAlign = "center";
+      ctx.font = '30px Arial';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
       ctx.fillText(
-        "Press SPACEBAR To Start",
+        'Press SPACEBAR To Start',
         this.gameWidth / 2,
         this.gameHeight / 2
       );
     }
+
     if (this.gamestate === GAMESTATE.GAMEOVER) {
       ctx.rect(0, 0, this.gameWidth, this.gameHeight);
-      ctx.fillStyle = "rgba(0,0,0,1)";
+      ctx.fillStyle = 'rgba(0,0,0,1)';
       ctx.fill();
 
-      ctx.font = "30px Arial";
-      ctx.fillStyle = "white";
-      ctx.textAlign = "center";
-      ctx.fillText("GAME OVER", this.gameWidth / 2, this.gameHeight / 2);
+      ctx.font = '30px Arial';
+      ctx.fillStyle = 'white';
+      ctx.textAlign = 'center';
+      ctx.fillText('GAME OVER', this.gameWidth / 2, this.gameHeight / 2);
     }
   }
 

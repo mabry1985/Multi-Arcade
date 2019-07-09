@@ -1,7 +1,7 @@
-import Game from "/src/game";
+import Game from '/src/game';
 
-let canvas = document.getElementById("gameScreen");
-let ctx = canvas.getContext("2d");
+let canvas = document.getElementById('gameScreen');
+let ctx = canvas.getContext('2d');
 
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 600;

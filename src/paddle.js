@@ -10,7 +10,7 @@ export default class Paddle {
 
     this.position = {
       x: game.gameWidth / 2 - this.width / 2,
-      y: game.gameHeight - this.height - 10
+      y: game.gameHeight - this.height - 10,
     };
   }
 
@@ -27,7 +27,7 @@ export default class Paddle {
   }
 
   draw(ctx) {
-    ctx.fillStyle = "#0ff";
+    ctx.fillStyle = '#0ff';
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
