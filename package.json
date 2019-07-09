@@ -2,7 +2,7 @@
   "name": "blankWebpack",
   "version": "1.0.0",
   "description": "",
-  "main": "asteroids.js",
+  "main": "main-page.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack --mode development",
@@ -15,6 +15,7 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
+    "materialize-css": "^1.0.0-rc.2",
     "popper.js": "^1.15.0",
     "webpack": "^4.19.1"
   },

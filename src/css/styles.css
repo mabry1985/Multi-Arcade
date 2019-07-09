@@ -1,0 +1,11 @@
+.card {
+  max-width: 600px;
+}
+
+#gif1 {
+  display: none;
+}
+
+.card:hover {
+  transform: scale(1.02)
+}
