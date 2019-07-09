@@ -1,8 +1,12 @@
 .card {
-  max-width: 600px;
+  max-width: 500px;
 }
 
-#gif1 {
+#still {
+ height: 548px;
+}
+
+#gif1, #gif2{
   display: none;
 }
 

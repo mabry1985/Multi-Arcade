@@ -22,4 +22,15 @@ $(document).ready(function () {
     $('.still').show();
   });
 
+  $('#card2').mouseenter(function () {
+    $('#gif2').show();
+    $('.still2').hide();
+  });
+
+  $('#card2').mouseleave(function () {
+    $('#gif2').hide();
+    $('.still2').show();
+  });
+
+
 });
