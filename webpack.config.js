@@ -18,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: '',
-      template: './src/main-page.html',
+      template: './src/game-template.html',
       inject: 'body'
     })
   ],
