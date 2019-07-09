@@ -2,7 +2,7 @@ const FPS = 30; // frames per second
 const FRICTION = 0.7; // friction coefficient of space (0 = no friction, 1 = lots of friction)
 const LASER_MAX = 10;
 const LASER_SPD = 500;
-const LASER_DIST = 0.3;
+const LASER_DIST = 0.6;
 const ROID_JAG = 0.4; // jaggedness of the asteroids (0 = none, 1 = lots)
 const ROID_NUM = 3; // starting number of asteroids
 const ROID_SIZE = 100; // starting size of asteroids in pixels
@@ -323,6 +323,33 @@ function update() {
     ctx.beginPath();
     ctx.arc(ship.lasers[k].x, ship.lasers[k].y, SHIP_SIZE / 15, 0, Math.PI * 2, false);
     ctx.fill();
+  }
+
+  //detect laser hit on asteroids
+  var ax;
+  var ay;
+  var ar;
+  var lx;
+  var ly;
+
+  for (let i = roids.length - 1; i >= 0; i--) {
+    ax = roids[i].x;
+    ay = roids[i].y;
+    ar = roids[i].r;
+  }
+
+  for (let j = ship.lasers.length - 1; j >= 0; j--) {
+
+    lx = ship.lasers[j].x;
+    ly = ship.lasers[j].y;
+
+    if (distBetweenPoints(ax, ay, lx, ly) < ar) {
+      ship.lasers.splice(j, 1);
+    }
+
+    roids.splice(i, 1);
+
+    break;
   }
 
   //check for asteroid collision
