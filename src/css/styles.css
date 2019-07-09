@@ -16,6 +16,7 @@ h1 {
   font-size: 3rem;
   margin-bottom: .5em;
   text-align: center;
+  text-shadow: 2px 2px 3px black;
 }
 
 ul {
@@ -23,10 +24,12 @@ ul {
 }
 
 li {
-  color: #ff9d00;
+  color: #FEE04A;
   font-size: .8rem;
   margin-bottom: 1em;
   text-transform: uppercase;
+  text-shadow: 1px 1px 1px black;
+  letter-spacing: 1px;
 }
 
 button {
@@ -56,7 +59,10 @@ button:focus, button:hover {
 
 .dialogue {
   align-items: center;
-  background-color: rgba(215, 1, 1, 0.85);
+  background-image: url('../assets/images/landing6.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -69,7 +75,7 @@ button:focus, button:hover {
   transform: translateX(0);
 }
 .dialogue__content {
-  max-width: 31.25rem;
+  max-width: 50.25rem;
   padding: 18px;
 }
 
