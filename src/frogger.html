@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Frogger</title>
+<head>
+    <title>Frogger In Canvas</title>
     <meta name="viewport" content="width=480, initial-scale=1.0">
     <style>
     @font-face {
-      font-family: 'Arcade Classic';
-      src: url('./assets/fonts/arcadeclassic.eot');
-      src: url('./assets/fonts/arcadeclassic.eot?#iefix') format('embedded-opentype'),
-           url('./assets/fonts/arcadeclassic.woff') format('truetype'),
-           url('./assets/fonts/arcadeclassic.svg#arcadeclassic') format('svg');
-      font-weight: normal;
-      font-style: normal;
+        font-family: 'Arcade Classic';
+        src: url('./assets/fonts/arcadeclassic.eot');
+        src: url('./assets/fonts/arcadeclassic.eot?#iefix') format('embedded-opentype'),
+             url('./assets/fonts/arcadeclassic.woff') format('woff'),
+             url('./assets/fonts/arcadeclassic.ttf') format('truetype'),
+             url('./assets/fonts/arcadeclassic.svg#arcadeclassic') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
-
     .canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: 2px solid #000;
-      width: 480px;
-      height: 640px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 2px solid #000;
+        width: 480px;
+        height: 640px;
     }
     </style>
-  </head>
-  <body>
-    <canvas id="background-canvas" class="canvas" width="960" height "1280"></canvas>
+</head>
+<body>
+    <canvas id="background-canvas" class="canvas" width="960" height="1280"></canvas>
     <canvas id="canvas" class="canvas" width="960" height="1280"></canvas>
-
-    <script src="frogger.js"></script>
-  </body>
+  <!-- <div class="hidden">
+    <img src="./assets/images/gameboard.gif" alt="gameboard">
+    <img src="./assets/images/spritemap.png" alt="map">
+    <img src="./assets/images/spritemap.psd" alt="sprite map">
+  </div> -->
+</body>
 </html>
