@@ -18,7 +18,7 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       title: '',
-      template: './src/breakout.html',
+      template: '../src/breakout.html',
       inject: 'body'
     })
   ],
