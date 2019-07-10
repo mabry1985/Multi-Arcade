@@ -1,0 +1,21 @@
+.banner {
+  text-align: center;
+  background-image: url("./../assets/img/sunset.gif");
+  font-family: 'Press Start 2P', cursive;
+  background-position: center 300px;
+  color: white;
+  text-shadow: 2px 2px 10px red;
+  height: 200px;
+}
+#banner-ready {
+    color: white;
+    animation:blinkingText 2s infinite;
+    font-size: 15px;
+}
+@keyframes blinkingText {
+  0%{color: white;}
+  49%{color: transparent;}
+  50%{color: white;}
+  99%{color: transparent;}
+  100%{color: white;}
+}
