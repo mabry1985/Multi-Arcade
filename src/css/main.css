@@ -1,0 +1,55 @@
+body {
+  background-color: rgba(236, 209, 255, 0.2);
+}
+
+#logo {
+  position: relative;
+  bottom: 60px;
+  color: #bfaeed;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+}
+
+.section {
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 18px;
+  color: #bfaeed;
+  background-color: #35003d;
+  overflow: hidden;
+}
+.card {
+  max-width: 500px;
+}
+
+#still {
+ height: 548px;
+}
+
+#gif1, #gif2{
+  display: none;
+}
+
+.card:hover {
+  transform: scale(1.02)
+}
+
+.topnav {
+  background-color: #35003d;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #bfaeed;
+  color: #c236c4;
+}

@@ -1,7 +1,7 @@
 import $ from 'jquery';
-import './css/styles.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
+import './css/main.css';
 
 $(document).ready(function () {
   $('.row').on('mouseover', '.card', function () {
