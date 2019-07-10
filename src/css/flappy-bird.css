@@ -7,7 +7,8 @@
 .jumbotron {
   text-align: center;
   border-radius: 10px  ;
-  background-color: pink;
+   background-image: linear-gradient(red, lavender);
+  /* background-color: pink; */
   color: white;
-  text-shadow: 2px 2px 8px;
+  text-shadow: 4px 4px 12px purple;
 }
